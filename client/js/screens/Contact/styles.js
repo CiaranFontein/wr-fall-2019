@@ -1,35 +1,41 @@
 import {StyleSheet} from 'react-native';
 import {THEME} from '../../config';
 const {
-  typography: {mainFont, hugeFont},
+  typography: {mainFont, hugeText},
 } = THEME;
 const styles = StyleSheet.create({
-  container: {
-    padding: 20,
+  page: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  content: {
+    width: '83%',
+    display: 'flex',
+    alignItems: 'flex-start',
   },
   heading: {
-    fontSize: hugeFont,
+    fontSize: hugeText,
     fontFamily: mainFont,
     fontWeight: 'bold',
-    paddingBottom: 10,
+    paddingVertical: 20,
   },
   image: {
     resizeMode: 'contain',
-    height: '60%',
-    width: '40%',
+    height: 80,
+    width: 80,
+    padding: 16,
   },
-  headerView: {
+  infoListItem: {
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingVertical: 10,
+    padding: 12,
   },
-  bodyText: {
-    paddingVertical: 25,
+  text: {
     fontFamily: mainFont,
-  },
-  bodyTextTwo: {
-    paddingVertical: 40,
-    fontFamily: mainFont,
+    padding: 20,
   },
 });
 export default styles;
